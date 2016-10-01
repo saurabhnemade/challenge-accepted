@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cognizant HackerEarth Challenge</title>
+
+    <link rel="icon" href="http://logonoid.com/images/cognizant-logo.png" type="png" sizes="16x16">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.2.0/classic/theme-crisp-touch/resources/theme-crisp-touch-all.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.2.0/ext-all-debug.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.2.0/classic/theme-crisp-touch/theme-crisp-touch.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js"></script>
+
+    <!--build:css all.css-->
+    <link rel="stylesheet" href="css/app.min.css"/>
+    <!--endbuild-->
+    <script>
+        //Load user locale
+        (function(window, Ext){
+            var locale = window.navigator.language,
+                defaultLang = 'en',
+                languages = ['locale/' + defaultLang + '.js'],
+                dashIndex = locale.indexOf('-');
+
+            if (~dashIndex){
+                locale = locale.slice(0, dashIndex);
+            }
+
+            if (defaultLang != locale){
+                languages.push('locale/' + locale + '.js');
+            }
+
+            //
+            Ext.Loader.loadScriptsSync(languages);
+            //
+        })(window, Ext);
+    </script>
+    <script src="app.min.js"></script>
+</head>
+<body>
+
+</body>
+</html>
